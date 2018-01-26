@@ -1,0 +1,14 @@
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+<script type="text/discourse-plugin" version="0.8.16">
+$(document).ajaxComplete(function() {
+	var $grid = $('.cooked>div[dir*="rtl"], .cooked>div[dir*="ltr"]');
+
+	$grid.css("visibility", "hidden").imagesLoaded(function() {
+		$grid.masonry({
+				itemSelector: ".lightbox-wrapper"
+			}).css("visibility", "visible");
+	});
+});
+</script>
