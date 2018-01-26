@@ -12,3 +12,18 @@ $(document).ajaxComplete(function() {
 	});
 });
 </script>
+
+<script type="text/discourse-plugin" version="0.4">
+    api.onToolbarCreate(function(toolbar){
+      toolbar.addButton({
+        trimLeading: true,
+        id: 'Gallery',
+        group: 'insertions',
+        icon: 'picture-o',
+        title: 'Gallery',
+        perform: function(e){
+          return e.applySurround('<div dir="rtl">\n\n', '\n</div>', 'Upload Gallery images here')
+        }
+      });
+    })
+</script>
