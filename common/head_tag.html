@@ -2,19 +2,9 @@
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 
 <script type="text/discourse-plugin" version="0.8.16">
-$(document).ajaxComplete(function() {
-	var $grid = $('.cooked>div[dir*="rtl"], .cooked>div[dir*="ltr"]');
 
-	$grid.css("visibility", "hidden").imagesLoaded(function() {
-		$grid.masonry({
-				itemSelector: ".lightbox-wrapper"
-			}).css("visibility", "visible");
-	});
-});
-</script>
-
-<script type="text/discourse-plugin" version="0.4">
 I18n.translations.en.js.composer.upload_gallery_images = "Upload Gallery Images here";
+
     api.onToolbarCreate(function(toolbar){
       toolbar.addButton({
         trimLeading: true,
@@ -27,4 +17,15 @@ I18n.translations.en.js.composer.upload_gallery_images = "Upload Gallery Images 
         }
       });
     })
+
+$(document).ajaxComplete(function() {
+	var $grid = $('.cooked>div[dir*="rtl"], .cooked>div[dir*="ltr"]');
+
+	$grid.css("visibility", "hidden").imagesLoaded(function() {
+		$grid.masonry({
+				itemSelector: ".lightbox-wrapper"
+			}).css("visibility", "visible");
+	});
+});
 </script>
+
