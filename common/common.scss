@@ -1,19 +1,14 @@
 $topic-masonry-padding: 2px;
-$min-width-for-two-columns: 500px;
 $min-width-for-three-columns: 850px;
 
 .cooked {
 	[dir*="rtl"],
 	[dir*="ltr"] {
 		.lightbox-wrapper {
-			width: 100%;
+			width: 50%;
 			display: inline-block;
 			padding: $topic-masonry-padding;
 			box-sizing: border-box;
-
-			@media (min-width: $min-width-for-two-columns) {
-				width: 50% !important;
-			}
 
 			@media (min-width: $min-width-for-three-columns) {
 				width: 33% !important;
