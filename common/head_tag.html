@@ -2,8 +2,8 @@
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 
 <script type="text/discourse-plugin" version="0.8.16">
-
 I18n.translations.en.js.composer.upload_gallery_images = "Upload Gallery Images here";
+I18n.translations.en.js.Gallery = "Gallery";
 
     api.onToolbarCreate(function(toolbar){
       toolbar.addButton({
@@ -17,6 +17,7 @@ I18n.translations.en.js.composer.upload_gallery_images = "Upload Gallery Images 
         }
       });
     })
+    
 
 $(document).ajaxComplete(function() {
 	var $grid = $('.cooked>div[dir*="rtl"], .cooked>div[dir*="ltr"]');
