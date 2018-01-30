@@ -5,6 +5,11 @@ $min-width-for-three-columns: 850px;
 	[dir*="rtl"],
 	[dir*="ltr"] {
 		.lightbox-wrapper {
+		    
+			* {
+				max-width: 100%;
+			}
+		    
 			width: 50%;
 			display: inline-block;
 			padding: $topic-masonry-padding;
